@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { LatestNewsApiService } from './latest-news-api.service';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -8,6 +10,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { HttpClient } from '@angular/common/http';
 
 // import { MatButtonModule } from '@angular/material';  MatListModule
 
@@ -28,8 +31,9 @@ import { from } from 'rxjs';
     MatIconModule,
     MatSidenavModule,
     MatListModule,
+    HttpClient,
   ],
-  providers: [],
+  providers: [LatestNewsApiService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
