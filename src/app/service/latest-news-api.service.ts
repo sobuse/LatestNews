@@ -14,7 +14,10 @@ export class LatestNewsApiService {
 
   constructor(private http: HttpClient) {}
 
-  getArticles(country: string = 'ng'): Observable<ApiResponse> {
+  getArticles(): Observable<ApiResponse> {
+    return this.http.get<ApiResponse>(this.newsApiUrl);
+  }
+  getByCountry(country: string = 'gb'): Observable<ApiResponse> {
     return this.http.get<ApiResponse>(`${this.newsApiUrl}&country=${country}`);
   }
   getByCategories(categories: string) {
