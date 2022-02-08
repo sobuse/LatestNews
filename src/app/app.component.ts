@@ -18,6 +18,7 @@ export class AppComponent {
   ngOnInit() {
     this.newsapi.getArticles().subscribe((result: ApiResponse) => {
       this.mArticles = result.results;
+      console.log(this.mArticles);
     });
   }
 }
