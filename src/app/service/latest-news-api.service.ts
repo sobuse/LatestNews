@@ -7,7 +7,7 @@ import { ApiResponse } from './types';
   providedIn: 'root',
 })
 export class LatestNewsApiService {
-  api_key = 'pub_41402da7159f969899505b97cd9fbe8df5b8';
+  api_key = 'pub_4422736d050b1f9ad6f85269df3d9c62c3eb';
 
   //newsApiUrl
   newsApiUrl = `https://newsdata.io/api/1/news?apikey=${this.api_key}`;
