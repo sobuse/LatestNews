@@ -36,7 +36,12 @@
           <mat-card-title class="title">{{ article.title }}</mat-card-title>
           <mat-card-subtitle>{{ title }}</mat-card-subtitle>
         </mat-card-header>
-        <img [src]="article.image_url" style="width: 50%" />
+        <img
+          class="thumbnail-image"
+          [src]="article.image_url"
+          style="width: 50%"
+          onerror="this.src= 'https://source.unsplash.com/random/600x450';"
+        />
 
         <mat-card-content>
           <p>
