@@ -12,16 +12,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { HttpClientModule } from '@angular/common/http';
 
-
 // import { MatButtonModule } from '@angular/material';  MatListModule
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { from } from 'rxjs';
-import { SportnewsComponent } from './sportnews/sportnews.component';
 
 @NgModule({
-  declarations: [AppComponent, SportnewsComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -34,7 +32,6 @@ import { SportnewsComponent } from './sportnews/sportnews.component';
     MatSidenavModule,
     MatListModule,
     HttpClientModule,
-    
   ],
   providers: [LatestNewsApiService],
   bootstrap: [AppComponent],
